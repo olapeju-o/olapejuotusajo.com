@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+         <a class="nav-brand" href="index.html">Olapeju Otusajo / UX DESIGNER</a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/olapejuotusajo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <main>
+            <section class="project-hero-tile">
+                <div class="project-hero-image" style="background-image: url('assets/palatebanner.png');"></div>
+                <div class="project-hero-text">
+                    <h1 class="project-hero-title">Palate: The App for Foodies</h1>
+                    <h2 class="project-hero-subtitle">Bringing my Code to Life with UX</h2>
+                </div>
+            </section>
+        <section class="project-detail-section">
+                <div class="detail-container">
+                    <h3 class="project-section-heading">Overview</h3>
+                    <p>In the fall of 2024, I was assigned an SQL based assignment for my 'IS 420: Database Application Development' course at the University of Maryland, Baltimore County (UMBC). The project involved designing and developing a database system to manage a company's chain of restaurants. My team and I worked on creating tables for important components like restaurant locations, menus, employees, and customer orders. We also developed procedures to handle tasks such as adding new restaurants, updating menus, processing orders, and generating reports. </p>
+                    
+                    <h3 class="project-section-heading">Problem Statement</h3>
+                    <p>The problem this project aimed to address was to create a well-organized database system to manage restaurant chains, their daily operations more effectively, and populate restaurants to users based on their preferences.  This project focused on developing a solution that would simplify these processes, ensure accurate record-keeping, and support the restaurant chain in running smoothly and making better decisions.</p>
+                </div>
+            </section>
+
+            <!-- Project Info Section -->
+            <section class="project-info-section">
+                <div class="project-info-container">
+                    <div class="project-info-column">
+                        <h3 class="project-info-heading">Role</h3>
+                        <p>Lead Programmer</p>
+                        <p>UX Designer</p>
+                    </div>
+                    <div class="project-info-column">
+                        <h3 class="project-info-heading">Tools Used</h3>
+                        <p>SQL</p>
+                        <p>Figma</p>
+                    </div>
+                    <div class="project-info-column">
+                        <h3 class="project-info-heading">Duration</h3>
+                        <p>September 2024 - December 2024</p>
+                    </div>
+                </div>
+            </section>
+            <section class="project-story-section">
+                <div class="project-story-container">
+                    <div class="project-story-text">
+                        <h2>My Contribution</h2>
+                        <p style="font-size: 1.5rem; font-weight: 400; color: #ababab; margin-top: -0.5rem;">Code Explanation </p>
+                        <p>I was responsible for designing and implementing the Reviews and Recommendations functionality within the database project. My contributions included creating the necessary tables for storing reviews and recommendations and developing key stored procedures to manage these operations.</p>
+
+                            <p><span class="pink-bold">Add_Review:</span> Allows users to submit reviews for restaurants, taking in their email, star rating (1-5), and feedback. A helper function retrieves necessary IDs for seamless integration.</p>
+                            
+                            <p><span class="pink-bold">Buy_Or_Beware:</span> Ranks restaurants by their average star ratings, displaying the top rated restaurants and the worst rated restaurants. Outputs include average stars, restaurant ID, cuisine type, and standard deviation.</p>
+                            
+                            <p><span class="pink-bold">Recommend_To_Customer:</span> Suggests the highest-rated restaurant for a specified cuisine type to a customer, ensuring recommendations are for restaurants they haven't previously visited or ordered from.</p>
+                            
+                            <p><span class="pink-bold">List_Recommendations:</span> Provides a report summarizing recommendations for all customers, including customer names, recommended restaurants, cuisine types, and average star ratings.</p>
+                    </div>
+                    <div class="project-story-image">
+                        <img src="assets/code1.png" alt="Southwest plane at airport gate from window">
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-analysis-section">
+                <div class="project-analysis-container">
+                    <div class="section-header-left">
+                        <h2>Skills Learned Through the Code Implementation</h2>
+                        <p class="section-subtitle">Gaining Proficiency in Structured Query Language</p>
+                    </div>
+                    <div class="pain-points-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-number">1</div>
+                            <div class="timeline-content">
+                                <h3>PL/SQL Programming</h3>
+                                <p>The code implementation covers creating stored procedures, which are reusable blocks of SQL code. Additionally, I practiced passing parameters into procedures, handling output, and using exception handling to manage errors.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">2</div>
+                            <div class="timeline-content">
+                                <h3>SQL Querying and Data Manipulation</h3>
+                                <p>I learned to create complex SQL queries involving multiple tables to fetch and aggregate data. By using functions like AVG(), STDDEV(), and COALESCE(), I developed an understanding of SQL operations and how to summarize data.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">3</div>
+                            <div class="timeline-content">
+                                <h3>Error Handling and Debugging</h3>
+                                <p>The code demonstrates using exception blocks to handle errors that might occur during execution, ensuring that the system remains in tact in case of unexpected issues.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-number">4</div>
+                            <div class="timeline-content">
+                                <h3>Stored Procedure Design</h3>
+                                <p>Creating stored procedures like add_review, buy_or_beware, and Recommend_To_Customer demonstrates how to break down large tasks into smaller pieces that can be reused throughout an application.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-personas-section">
+                <div class="project-personas-container">
+                    <div class="section-header-left">
+                        <h2>Code Explanation </h2>
+                        <p class="section-subtitle">'Add_Review' Procedure</p>
+                    </div>
+                    <div class="personas-content">
+                        <h3 class="personas-subheading">Key Functionality</h3>
+                        <p>The add_review procedure allows customers to submit reviews for restaurants. It first checks if the restaurant exists by looking up its unique ID based on the name. If the restaurant is found, the procedure adds the review, including the customer's email, rating, and feedback, to the database, ensuring that each review has a unique identifier. The procedure then saves the review by committing the transaction. If the restaurant is not found, an error message is displayed.</p>
+                        
+                        <h3 class="personas-subheading">'Add_Review' Code</h3>
+                        <img src="assets/code2.png" alt="lines of code" class="persona-image">
+                        
+                        <h3 class="personas-subheading">Code Output</h3>
+                        <img src="assets/code3.png" alt="output of code" class="persona-image">
+                </div>
+            </section>
+
+            <section class="project-personas-section">
+                <div class="project-personas-container">
+                    <div class="section-header-left">
+                        <h2>Code Explanation </h2>
+                        <p class="section-subtitle">'Buy_or_Beware' Procedure</p>
+                    </div>
+                    <div class="personas-content">
+                        <h3 class="personas-subheading">Key Functionality</h3>
+                        <p>The key functionality of the buy_or_beware procedure is to generate reports on both top-rated and bottom-rated restaurants based on customer reviews. It calculates the average star rating and the standard deviation of ratings for each restaurant, sorting the results to display the highest and lowest-rated restaurants.</p>
+                        
+                        <h3 class="personas-subheading">'Buy_or_Beware' Code</h3>
+                        <img src="assets/code4.png" alt="lines of code" class="persona-image">
+                        <img src="assets/code5.png" alt="lines of code" class="persona-image">
+                        <h3 class="personas-subheading">Code Output</h3>
+                        <img src="assets/code6.png" alt="output of code" class="persona-image">
+                </div>
+            </section>
+
+            <section class="project-wireframe-section">
+                <div class="project-wireframe-container">
+                    <div class="section-header-left">
+                        <h2>High Fidelity Prototype - Customer Reviews</h2>
+                        <p class="section-subtitle">Visualizing  the  'Add_Review ' and 'Buy_or_Beware' Procedure</p>
+                    </div>
+                    <div class="wireframe-gallery">
+                        <div class="wireframe-item">
+                            <img src="assets/phome1.png" alt="Welcome page wireframe" class="wireframe-image">
+                        </div>
+                        <div class="wireframe-item">
+                            <img src="assets/phome2.png" alt="Dream destination wireframe" class="wireframe-image">
+                        </div>
+                        <div class="wireframe-item">
+                            <img src="assets/phome3.png" alt="Travel frequency wireframe" class="wireframe-image">
+                        </div>
+                        <div class="wireframe-item">
+                            <img src="assets/phome4.png" alt="Sign in/Log in wireframe" class="wireframe-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="project-personas-section">
+                <div class="project-personas-container">
+                    <div class="section-header-left">
+                        <h2>'Recommend_To_Customer' Procedure</h2>
+                        <p class="section-subtitle">Code Explanation</p>
+                    </div>
+                    <div class="personas-content">
+                        <h3 class="personas-subheading">Key Functionality</h3>
+                        <p>The Recommend_To_Customer procedure recommends the highest-rated restaurant specializing in a specified cuisine type to a customer, provided the customer hasn't already ordered from a restaurant offering that cuisine. It first verifies the customer's existence, then identifies the best-rated restaurant based on average review ratings.</p>
+                        
+                        <h3 class="personas-subheading">'Recommend_To_Customer' Code</h3>
+                        <img src="assets/code7.png" alt="lines of code" class="persona-image">
+                        
+                        <h3 class="personas-subheading">Code Output</h3>
+                        <img src="assets/code8.png" alt="output of code" class="persona-image">
+                </div>
+            </section>
+
+<section class="project-prototype-section">
+    <div class="project-prototype-container">
+        <div class="section-header-left">
+            <h2>High Fidelity Prototype - Hunger Quiz</h2>
+            <p class="section-subtitle">Visualizing  the  'Recommend_To_Customer' Procedure</p>
+        </div>
+        <div class="prototype-gallery">
+            <div class="prototype-item">
+                <img src="assets/hq1.png" alt="Hunger Quiz Step 1" class="prototype-image">
+            </div>
+            <div class="prototype-item">
+                <img src="assets/hq2.png" alt="Hunger Quiz Step 2" class="prototype-image">
+            </div>
+            <div class="prototype-item">
+                <img src="assets/hq3.png" alt="Hunger Quiz Step 3" class="prototype-image">
+            </div>
+            <div class="prototype-item">
+                <img src="assets/hq4.png" alt="Hunger Quiz Step 4" class="prototype-image">
+            </div>
+            <div class="prototype-item">
+                <img src="assets/hq5.png" alt="Hunger Quiz Step 5" class="prototype-image">
+            </div>
+            <div class="prototype-item">
+                <img src="assets/hq6.png" alt="Hunger Quiz Step 6" class="prototype-image">
+            </div>
+        </div>
+    </div>
+        </section>
+
+        <section class="project-personas-section">
+            <div class="project-personas-container">
+                <div class="section-header-left">
+                    <h2>'List_Recommendations' Procedure</h2>
+                    <p class="section-subtitle">Code Explanation</p>
+                </div>
+                <div class="personas-content">
+                    <h3 class="personas-subheading">Key Functionality</h3>
+                    <p>The List_Recommendations procedure generates and displays a list of restaurant recommendations for customers based on their preferences and past orders. It joins the recommendation, customer, restaurant, and review tables to retrieve the customer's name, the restaurant's name and specialty, and the average rating of the restaurant. The recommendations are displayed, showing each customer's recommended restaurant, its cuisine type, and the average rating.</p>
+                    
+                    <h3 class="personas-subheading">'List_Recommendations' Code</h3>
+                    <img src="assets/code9.png" alt="lines of code" class="persona-image">
+                    
+                    <h3 class="personas-subheading">Code Output</h3>
+                    <img src="assets/code10.png" alt="output of code" class="persona-image">
+            </div>
+        </section>
+        <section class="project-prototype-section">
+            <div class="project-prototype-container">
+                <div class="section-header-left">
+                    <h2>High Fidelity Prototype - Hunger Quiz Results</h2>
+                    <p class="section-subtitle">Visualizing  the  'List_Recommendations' Procedure</p>
+                </div>
+                <div class="prototype-gallery">
+                    <div class="prototype-item">
+                        <img src="assets/hqr1.png" alt="Hunger Quiz Step 1" class="prototype-image">
+                    </div>
+                    <div class="prototype-item">
+                        <img src="assets/hqr2.png" alt="Hunger Quiz Step 2" class="prototype-image">
+                    </div>
+                    <div class="prototype-item">
+                        <img src="assets/hqr3.png" alt="Hunger Quiz Step 3" class="prototype-image">
+                    </div>
+                    <div class="prototype-item">
+                        <img src="assets/hqr4.png" alt="Hunger Quiz Step 4" class="prototype-image">
+                    </div>
+                    <div class="prototype-item">
+                        <img src="assets/hqr5.png" alt="Hunger Quiz Step 5" class="prototype-image">
+                    </div>
+                </div>
+            </div>
+                </section>
+<section class="project-personas-section">
+            <div class="project-personas-container">
+                <div class="section-header-left">
+                    <h2>Final Prototype</h2>
+                    <p class="section-subtitle">56 Interactive Pages</p>
+                </div>
+                <div class="personas-content">
+                    <h3 class="personas-subheading">Solution Overview</h3>
+                    <p>While designing high-fidelity prototypes to support the four procedures I created for my restaurant database project, I integrated features from my code to improve the customer experience. I also developed new ideas to make the prototypes more effective. Working with both PL/SQL and NoSQL, I gained hands-on experience with both back-end and front-end development, learning how to align technical capabilities with user-friendly design. My prototypes aim to make the restaurant selection process easier by providing clear access to customer reviews, enabling informed decisions, and encouraging a sense of community through shared feedback.</p>
+                    <a href= "assets/IS 420 Final script.txt" class="demo-video-link" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color);">View the Final SQL Code Here!</a>
+            </div>
+        </section>
+<section class="demo-video-section">
+            <div class="demo-video-container">
+                <h2>Demo Video</h2>
+                <a href="https://www.figma.com/proto/TI9dcIcvf1sp2zAnTozoKu/Palate?node-id=0-1&t=RZCkJoWvFB48YLSu-1" class="demo-video-link" target="_blank" rel="noopener noreferrer">Try it Out Yourself!</a>
+                <div class="video-player-wrapper">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="assets/nw.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="more-projects-section">
+            <div class="more-projects-container">
+                <div class="section-header-left">
+                    <h2>More Projects</h2>
+                    <p class="section-subtitle">Check out my other work</p>
+                </div>
+                <div class="more-projects-grid" id="more-projects-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="enhanced-footer">
+        <div class="footer-container footer-flex-main">
+            <div class="footer-left">
+                <div class="footer-line creative-line">
+                    <span class="creative-text">Let's get creative!</span>
+                    <a href="mailto:olapeju.s.otusajo@gmail.com" class="cta-footer-btn"><i class="fas fa-envelope"></i> Let's Chat!</a>
+                </div>
+                <div class="footer-line">
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/olapejuotusajo/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="mailto:olapeju.s.otusajo@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>olapeju.s.otusajo@gmail.com</span>
+                        </a>
+                        <a href="tel:+14435158476" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (443) 515-8476</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-line">
+                    <div class="sitemap-links">
+                        <a href="index.html">Home</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="about.html">About Me</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-section">
+            <p class="copyright">&copy; 2025 <a href="index.html" class="footer-link">Olapeju Otusajo</a>. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Project data
+        const projects = [
+            { id: 1, title: "Wander", subtitle: "Travel Assistant", image: "assets/project1.png", link: "wander.html", type: "case-study" },
+            { id: 2, title: "First Round", subtitle: "Job Matcher", image: "assets/project2.png", link: "firstround.html", type: "case-study" },
+            { id: 3, title: "Palate", subtitle: "Restaurants Near Me", image: "assets/project3.png", link: "project3.html", type: "case-study" },
+            { id: 4, title: "MDCaps", subtitle: "Maryland Financial Aid", image: "assets/project4.png", link: "mdcaps.html", type: "redesign" },
+            { id: 5, title: "Gate N' Fences", subtitle: "Home Renovation", image: "assets/project5.png", link: "gatenfences.html", type: "redesign" },
+            { id: 6, title: "WTMD", subtitle: "Maryland Radio", image: "assets/project6.png", link: "wtmd.html", type: "redesign" }
+        ];
+
+        // Function to shuffle array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Function to get random projects (2 case studies, 2 redesigns, excluding current)
+        function getRandomProjects(currentProjectId) {
+            const availableProjects = projects.filter(project => project.id !== currentProjectId);
+            const caseStudies = availableProjects.filter(project => project.type === "case-study");
+            const redesigns = availableProjects.filter(project => project.type === "redesign");
+            
+            // Shuffle and take 2 from each category
+            const selectedCaseStudies = shuffleArray([...caseStudies]).slice(0, 2);
+            const selectedRedesigns = shuffleArray([...redesigns]).slice(0, 2);
+            
+            // Combine and shuffle again
+            return shuffleArray([...selectedCaseStudies, ...selectedRedesigns]);
+        }
+
+        // Populate more projects section
+        function populateMoreProjects() {
+            const grid = document.getElementById('more-projects-grid');
+            const currentProjectId = 3; // Current project ID
+            const randomProjects = getRandomProjects(currentProjectId);
+            
+            grid.innerHTML = randomProjects.map(project => `
+                <a href="${project.link}" class="more-project-card">
+                    <img src="${project.image}" alt="${project.title}: ${project.subtitle}">
+                    <div class="more-project-overlay">
+                        <h3>${project.title}</h3>
+                        <p>${project.subtitle}</p>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', populateMoreProjects);
+    </script>
+</body>
+</html> 
