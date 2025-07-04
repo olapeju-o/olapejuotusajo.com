@@ -1616,7 +1616,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 30px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     background: #fff;
-    margin-top: 40px;
+    margin-top: -80px;
 }
 
 .about-text {
@@ -1662,6 +1662,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 90vw;
         height: auto;
         max-width: 350px;
+        margin-top: 20px;
     }
     .about-title {
         font-size: 3rem;
