@@ -122,22 +122,47 @@ document.querySelectorAll('.scroll-item').forEach(item => {
 });
 
 // Mobile navigation buttons for projects page
-document.querySelectorAll('.mobile-nav-btn').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileNavButtons = document.querySelectorAll('.mobile-nav-btn');
+    console.log('Found mobile nav buttons:', mobileNavButtons.length); // Debug log
+    
+    // Test each button to make sure it has the correct data-target attribute
+    mobileNavButtons.forEach((button, index) => {
         const targetId = button.getAttribute('data-target');
-        const target = document.querySelector(`#${targetId}`);
+        console.log(`Button ${index + 1}:`, button.textContent, '->', targetId);
         
+        // Check if the target section exists
+        const target = document.querySelector(`#${targetId}`);
         if (target) {
-            // Close mobile menu if open
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-            document.body.style.overflow = '';
-
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            console.log(`✅ Target found for ${targetId}`);
+        } else {
+            console.error(`❌ Target NOT found for ${targetId}`);
         }
+    });
+    
+    mobileNavButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = button.getAttribute('data-target');
+            console.log('Mobile nav button clicked:', targetId); // Debug log
+            
+            const target = document.querySelector(`#${targetId}`);
+            console.log('Target element found:', target); // Debug log
+            
+            if (target) {
+                // Close mobile menu if open
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                console.log('Scrolling to target:', targetId); // Debug log
+            } else {
+                console.error('Target element not found for:', targetId); // Error log
+            }
+        });
     });
 }); 
