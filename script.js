@@ -119,4 +119,25 @@ document.querySelectorAll('.scroll-item').forEach(item => {
             }, 500); 
         }
     });
+});
+
+// Mobile navigation buttons for projects page
+document.querySelectorAll('.mobile-nav-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = button.getAttribute('data-target');
+        const target = document.querySelector(`#${targetId}`);
+        
+        if (target) {
+            // Close mobile menu if open
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = '';
+
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 }); 
