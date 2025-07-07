@@ -6731,7 +6731,7 @@ img {
 
     .nav-links a {
         font-size: 1.2rem;
-        padding: 1rem 0;
+        padding: 0.75rem 0;
         width: 100%;
         text-align: center;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -6739,7 +6739,7 @@ img {
     }
 
     .nav-links a:hover {
-        background: rgba(255, 105, 180, 0.1);
+        background: rgba(255, 105, 180, 0.05);
         color: var(--primary-color);
     }
 
@@ -7720,7 +7720,7 @@ img {
     }
 
     .nav-links a {
-        padding: 0.75rem 0;
+        padding: 1.5rem 0;
         font-size: 1.1rem;
     }
 
