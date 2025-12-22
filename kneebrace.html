@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoskeleton Knee Brace: Stroke Patient Assistance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="nav-brand" href="index.html">Olapeju Otusajo / UX DESIGNER</a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/olapejuotusajo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-hero-tile">
+            <div class="project-hero-image project-hero-image-kneebrace"></div>
+            <div class="project-hero-text">
+                <h1 class="project-hero-title">Exoskeleton Knee Brace: Stroke Patient Assistance</h1>
+                <p class="project-hero-subtitle">3D Prototyping & Wearable Technology</p>
+            </div>
+        </section>
+
+        <section class="kb-coming-soon">
+            <div class="kb-coming-soon-wrapper">
+                <h2 class="fr4-heading">More Coming Soon</h2>
+                <p class="fr4-text">This project page is currently under development. Check back soon for updates!</p>
+            </div>
+        </section>
+
+        <section class="fr4-more">
+            <div class="fr4-more-wrapper">
+                <div class="fr4-header">
+                    <h2 class="fr4-heading">More Projects</h2>
+                    <p class="fr4-subheading">Check out my other work</p>
+                </div>
+                <div class="fr4-more-grid" id="fr4-more-projects-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="enhanced-footer">
+        <div class="footer-container footer-flex-main">
+            <div class="footer-left">
+                <div class="footer-line creative-line">
+                    <span class="creative-text">Let's get creative!</span>
+                    <a href="mailto:olapeju.s.otusajo@gmail.com" class="cta-footer-btn"><i class="fas fa-envelope"></i> Let's Chat!</a>
+                </div>
+                <div class="footer-line">
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/olapejuotusajo/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="mailto:olapeju.s.otusajo@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>olapeju.s.otusajo@gmail.com</span>
+                        </a>
+                        <a href="tel:+14435158476" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (443) 515-8476</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-line">
+                    <div class="sitemap-links">
+                        <a href="index.html">Home</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="about.html">About Me</a>
+                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright-section">
+            <p class="copyright">&copy; 2025 <a href="index.html" class="footer-link">Olapeju Otusajo</a>. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Project data
+        const projects = [
+            { id: 1, title: "Wander", subtitle: "Travel Assistant", image: "assets/project1.png", link: "wander.html", type: "case-study" },
+            { id: 2, title: "First Round", subtitle: "Job Matcher", image: "assets/project2.png", link: "firstround.html", type: "case-study" },
+            { id: 3, title: "Palate", subtitle: "Restaurants Near Me", image: "assets/project3.png", link: "palate.html", type: "case-study" },
+            { id: 4, title: "MDCaps", subtitle: "Maryland Financial Aid", image: "assets/project4.png", link: "mdcaps.html", type: "redesign" },
+            { id: 5, title: "CAACURH", subtitle: "Conference Design", image: "assets/project7.png", link: "caacurh.html", type: "graphic-design" },
+            { id: 6, title: "Urban Drifters", subtitle: "Self-Driving Scooter", image: "assets/scooter.png", link: "scooter.html", type: "industrial-design" }
+        ];
+
+        // Function to shuffle array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Function to get random projects (max 4, excluding current)
+        function getRandomProjects(currentProjectId) {
+            const availableProjects = projects.filter(project => project.id !== currentProjectId);
+            
+            // Shuffle and take max 4 projects
+            return shuffleArray([...availableProjects]).slice(0, 4);
+        }
+
+        // Populate more projects section
+        function populateMoreProjects() {
+            const grid = document.getElementById('fr4-more-projects-grid');
+            const currentProjectId = 8; // Current project ID
+            const randomProjects = getRandomProjects(currentProjectId);
+            
+            grid.innerHTML = randomProjects.map(project => `
+                <a href="${project.link}" class="fr4-more-card">
+                    <img src="${project.image}" alt="${project.title}: ${project.subtitle}">
+                    <div class="fr4-more-overlay">
+                        <h3>${project.title}</h3>
+                        <p>${project.subtitle}</p>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', populateMoreProjects);
+    </script>
+</body>
+</html>
+

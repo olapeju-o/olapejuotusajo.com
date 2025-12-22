@@ -294,13 +294,13 @@
         </section>
 
 
-        <section class="more-projects-section">
-            <div class="more-projects-container">
-                <div class="section-header-left">
-                    <h2>More Projects</h2>
-                    <p class="section-subtitle">Check out my other work</p>
+        <section class="fr4-more">
+            <div class="fr4-more-wrapper">
+                <div class="fr4-header">
+                    <h2 class="fr4-heading">More Projects</h2>
+                    <p class="fr4-subheading">Check out my other work</p>
                 </div>
-                <div class="more-projects-grid" id="more-projects-grid">
+                <div class="fr4-more-grid" id="fr4-more-projects-grid">
                     <!-- Projects will be populated by JavaScript -->
                 </div>
             </div>
@@ -353,8 +353,7 @@
             { id: 2, title: "First Round", subtitle: "Job Matcher", image: "assets/project2.png", link: "firstround.html", type: "case-study" },
             { id: 3, title: "Palate", subtitle: "Restaurants Near Me", image: "assets/project3.png", link: "project3.html", type: "case-study" },
             { id: 4, title: "MDCaps", subtitle: "Maryland Financial Aid", image: "assets/project4.png", link: "mdcaps.html", type: "redesign" },
-            { id: 5, title: "Gate N' Fences", subtitle: "Home Renovation", image: "assets/project5.png", link: "gatenfences.html", type: "redesign" },
-            { id: 6, title: "WTMD", subtitle: "Maryland Radio", image: "assets/project6.png", link: "wtmd.html", type: "redesign" }
+            { id: 5, title: "Urban Drifters", subtitle: "Self-Driving Scooter", image: "assets/scooter.png", link: "scooter.html", type: "industrial-design" }
         ];
 
         // Function to shuffle array
@@ -366,30 +365,24 @@
             return array;
         }
 
-        // Function to get random projects (2 case studies, 2 redesigns, excluding current)
+        // Function to get random projects (max 4, excluding current)
         function getRandomProjects(currentProjectId) {
             const availableProjects = projects.filter(project => project.id !== currentProjectId);
-            const caseStudies = availableProjects.filter(project => project.type === "case-study");
-            const redesigns = availableProjects.filter(project => project.type === "redesign");
             
-            // Shuffle and take 2 from each category
-            const selectedCaseStudies = shuffleArray([...caseStudies]).slice(0, 2);
-            const selectedRedesigns = shuffleArray([...redesigns]).slice(0, 2);
-            
-            // Combine and shuffle again
-            return shuffleArray([...selectedCaseStudies, ...selectedRedesigns]);
+            // Shuffle and take max 4 projects
+            return shuffleArray([...availableProjects]).slice(0, 4);
         }
 
         // Populate more projects section
         function populateMoreProjects() {
-            const grid = document.getElementById('more-projects-grid');
+            const grid = document.getElementById('fr4-more-projects-grid');
             const currentProjectId = 3; // Current project ID
             const randomProjects = getRandomProjects(currentProjectId);
             
             grid.innerHTML = randomProjects.map(project => `
-                <a href="${project.link}" class="more-project-card">
+                <a href="${project.link}" class="fr4-more-card">
                     <img src="${project.image}" alt="${project.title}: ${project.subtitle}">
-                    <div class="more-project-overlay">
+                    <div class="fr4-more-overlay">
                         <h3>${project.title}</h3>
                         <p>${project.subtitle}</p>
                     </div>

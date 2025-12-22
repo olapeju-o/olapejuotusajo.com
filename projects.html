@@ -30,115 +30,27 @@
     </nav>
 
     <!-- Projects Header -->
-    <section class="projects-header">
-        <div class="header-content">
-            <h1>My Projects</h1>
-            <p class="projects-intro">A collection of my work in UX design, showcasing both case studies and redesign projects.</p>
-        </div>
-        
-        <!-- Horizontal Project Scroll -->
-        <div class="horizontal-scroll">
-            <div class="scroll-container case-studies-scroll">
-                <a href="wander.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project1.png" alt="Project 1">
-                    </div>
-                    <h3>Wander<br>Travel Assistant</h3>
-                    <p>UX Research & Visual Design</p>
-                </a>
-                <a href="firstround.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project2.png" alt="Project 2">
-                    </div>
-                    <h3>First Round<br>Job Matcher</h3>
-                    <p>Interaction & Visual Design</p>
-                </a>
-                <a href="palate.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project3.png" alt="Project 3">
-                    </div>
-                    <h3>Palate<br>Restaurants Near Me</h3>
-                    <p>Programming & Visual Design</p>
-                </a>
-                <a href="mdcaps.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project4.png" alt="Project 4">
-                    </div>
-                    <h3>MDCaps<br>Maryland Financial Aid</h3>
-                    <p>Comprehensive Redesign: 4 Pages</p>
-                </a>
-                <a href="gatenfences.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project5.png" alt="Project 5">
-                    </div>
-                    <h3>Gate N' Fences<br>Home Renovation</h3>
-                    <p>Minimal Redesign: 3 Pages</p>
-                </a>
-                <a href="wtmd.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project6.png" alt="Project 6">
-                    </div>
-                    <h3>WTMD<br>Maryland Radio</h3>
-                    <p>Minimal Redesign: 1 Page</p>
-                </a>
-                
-                <a href="wander.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project1.png" alt="Project 1">
-                    </div>
-                    <h3>Wander<br>Travel Assistant</h3>
-                    <p>UX Research & Visual Design</p>
-                </a>
-                <a href="firstround.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project2.png" alt="Project 2">
-                    </div>
-                    <h3>First Round<br>Job Matcher</h3>
-                    <p>Interaction & Visual Design</p>
-                </a>
-                <a href="palate.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project3.png" alt="Project 3">
-                    </div>
-                    <h3>Palate<br>Restaurants Near Me</h3>
-                    <p>Programming & Visual Design</p>
-                </a>
-                <a href="mdcaps.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project4.png" alt="Project 4">
-                    </div>
-                    <h3>MDCaps<br>Maryland Financial Aid</h3>
-                    <p>Comprehensive Redesign: 4 Pages</p>
-                </a>
-                <a href="gatenfences.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project5.png" alt="Project 5">
-                    </div>
-                    <h3>Gate N' Fences<br>Home Renovation</h3>
-                    <p>Minimal Redesign: 3 Pages</p>
-                </a>
-                <a href="wtmd.html" class="scroll-item">
-                    <div class="scroll-image">
-                        <img src="assets/project6.png" alt="Project 6">
-                    </div>
-                    <h3>WTMD<br>Maryland Radio</h3>
-                    <p>Minimal Redesign: 1 Page</p>
-                </a>
+    <section class="projects-header section">
+        <div class="header-content container">
+            <h1 class="section-heading">My Projects</h1>
+            <p class="projects-intro">A collection of my work in UX, Visual, and Industrial Design, showcasing projects across multiple disciplines.</p>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="case-study">Case Studies</button>
+                <button class="filter-btn" data-filter="redesign">Redesigns</button>
+                <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
+                <button class="filter-btn" data-filter="industrial-design">Industrial Design</button>
             </div>
         </div>
     </section>
 
-    <!-- Case Studies Section -->
-    <section id="case-studies" class="projects-section">
-        <div class="section-header">
-            <h2>Case Studies</h2>
-            <p class="section-subtitle">Solving real-world problems with user-focused designs and solutions...</p>
-        </div>
-        <div class="projects-grid">
-            <div id="case-study-1" class="project-card">
+    <!-- Projects Gallery -->
+    <section class="projects-section section">
+        <div class="projects-grid container">
+            <div class="project-card" data-filter="case-study">
                 <div class="project-content">
                     <span class="project-category">UX Research & Visual Design</span>
-                    <h3>Wander</h3>
+                    <h3>Wander: Travel Assistant</h3>
                     <p>Wander reflects my growth in UX research, iterative prototyping, and designing solutions that reduce stress and add real-world value.</p>
                     <div class="project-tags">
                         <span>Figma</span>
@@ -148,10 +60,10 @@
                     <a href="wander.html" class="view-project">View Case Study</a>
                 </div>
                 <div class="project-image">
-                    <img src="assets/project1.png" alt="Project 1">
+                    <img src="assets/project1.png" alt="Wander Travel Assistant">
                 </div>
             </div>
-            <div id="case-study-2" class="project-card">
+            <div class="project-card" data-filter="case-study">
                 <div class="project-content">
                     <span class="project-category">Interaction & Visual Design</span>
                     <h3>First Round: Job Matcher</h3>
@@ -163,10 +75,10 @@
                     <a href="firstround.html" class="view-project">View Case Study</a>
                 </div>
                 <div class="project-image">
-                    <img src="assets/project2.png" alt="Project 2">
+                    <img src="assets/project2.png" alt="First Round Job Matcher">
                 </div>
             </div>
-            <div id="case-study-3" class="project-card">
+            <div class="project-card" data-filter="case-study">
                 <div class="project-content">
                     <span class="project-category">Programming & Visual Design</span>
                     <h3>Palate: Restaurants Near Me</h3>
@@ -179,20 +91,10 @@
                     <a href="palate.html" class="view-project">View Case Study</a>
                 </div>
                 <div class="project-image">
-                    <img src="assets/project3.png" alt="Project 3">
+                    <img src="assets/project3.png" alt="Palate Restaurants Near Me">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Redesign Projects Section -->
-    <section id="redesign-projects" class="projects-section">
-        <div class="section-header">
-            <h2>Redesign Projects</h2>
-            <p class="section-subtitle">Identifying Pain Points and Developing Solutions...</p>
-        </div>
-        <div class="projects-grid">
-            <div id="redesign-1" class="project-card">
+            <div class="project-card" data-filter="redesign">
                 <div class="project-content">
                     <span class="project-category">UX & UI Redesign</span>
                     <h3>MDCaps: Maryland Financial Aid</h3>
@@ -201,57 +103,16 @@
                         <span>Figma</span>
                         <span>Adobe XD</span>
                     </div>
-                    <a href="mdcaps.html" class="view-project">View Case Study</a>
+                    <a href="mdcaps.html" class="view-project">View Redesign</a>
                 </div>
                 <div class="project-image">
-                    <img src="assets/project4.png" alt="Project 4">
+                    <img src="assets/project4.png" alt="MDCaps Maryland Financial Aid">
                 </div>
             </div>
-            <div id="redesign-2" class="project-card">
-                <div class="project-content">
-                    <span class="project-category">UX & UI Redesign</span>
-                    <h3>Gate N' Fences: Home Renovation</h3>
-                    <p>A minimal redesign project focusing on three key pages of a home renovation service website. This project demonstrates the ability to enhance user experience while maintaining brand consistency.</p>
-                    <div class="project-tags">
-                        <span>Figma</span>
-                        <span>Adobe XD</span>
-                    </div>
-                    <a href="gatenfences.html" class="view-project">View Redesign</a>
-                </div>
-                <div class="project-image">
-                    <img src="assets/project5.png" alt="Project 5">
-                </div>
-            </div>
-            <div id="redesign-3" class="project-card">
-                <div class="project-content">
-                    <span class="project-category">UX & UI Redesign</span>
-                    <h3>WTMD: Maryland Radio</h3>
-                    <p>A focused redesign of a single page for Maryland's public radio station. This project showcases the ability to improve user experience and visual design while maintaining the station's unique identity.</p>
-                    <div class="project-tags">
-                        <span>Figma</span>
-                        <span>Adobe XD</span>
-                        <span>Sketch</span>
-                    </div>
-                    <a href="wtmd.html" class="view-project">View Redesign</a>
-                </div>
-                <div class="project-image">
-                    <img src="assets/project6.png" alt="Project 6">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Graphic Design Section -->
-    <section id="graphic-design" class="projects-section">
-        <div class="section-header">
-            <h2>Graphic Design</h2>
-            <p class="section-subtitle">Creating compelling visual identities and brand experiences...</p>
-        </div>
-        <div class="projects-grid">
-            <div id="graphic-design-1" class="project-card">
+            <div class="project-card" data-filter="graphic-design">
                 <div class="project-content">
                     <span class="project-category">Brand Identity & Visual Design</span>
-                    <h3>CAACURH Regional Leadership Conference</h3>
+                    <h3>CAACURH: Regional Leadership Conference Conference Design</h3>
                     <p>A full-scale branding and marketing campaign for a regional leadership conference. This project highlights my ability to create cohesive, theme-driven designs across print and digital media for over 300 attendees.</p>
                     <div class="project-tags">
                         <span>Adobe Illustrator</span>
@@ -262,9 +123,44 @@
                     <a href="caacurh.html" class="view-project">View Project</a>
                 </div>
                 <div class="project-image">
-                    <img src="assets/project7.png" alt="Project 7">
+                    <img src="assets/project7.png" alt="CAACURH Regional Leadership Conference">
                 </div>
             </div>
+            <div class="project-card" data-filter="industrial-design">
+                <div class="project-content">
+                    <span class="project-category">3D Prototyping & Interaction Design</span>
+                    <h3>Urban Drifters: Self-Driving Scooter</h3>
+                    <p>A human-centered design project focused on creating a safe, intuitive semi-autonomous electric scooter experience for urban exploration.</p>
+                    <div class="project-tags">
+                        <span>Figma</span>
+                        <span>Microsoft Visio</span>
+                        <span>Fig Jam</span>
+                    </div>
+                    <a href="scooter.html" class="view-project">View Project</a>
+                </div>
+                <div class="project-image">
+                    <img src="assets/scooter.png" alt="Urban Drifters">
+                </div>
+            </div>
+            <div class="project-card" data-filter="industrial-design">
+                <div class="project-content">
+                    <span class="project-category">3D Prototyping & Wearable Technology</span>
+                    <h3>Exoskeleton Knee Brace: Stroke Patient Assistance</h3>
+                    <p>An accessible, low-cost knee exoskeleton design focused on ergonomic support, combining passive mechanical assistance with user-centered wearable design principles.</p>
+                    <div class="project-tags">
+                        <span>Fusion 360</span>
+                        <span>Figma</span>
+                        <span>3D Modeling</span>
+                    </div>
+                    <span class="view-project" style="cursor: default; pointer-events: none; opacity: 0.7;">Coming Soon!</span>
+                </div>
+                <div class="project-image">
+                    <img src="assets/kneebrace.png" alt="Exoskeleton Knee Brace">
+                </div>
+            </div>
+        </div>
+        <div id="no-results" class="no-results-message" style="display: none;">
+            <p>No projects found in this category.</p>
         </div>
     </section>
 
@@ -310,5 +206,97 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Project filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            const noResultsMessage = document.getElementById('no-results');
+            const projectsGrid = document.querySelector('.projects-grid');
+
+            // Function to shuffle array (Fisher-Yates algorithm)
+            function shuffleArray(array) {
+                const shuffled = Array.from(array);
+                for (let i = shuffled.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                }
+                return shuffled;
+            }
+
+            // Function to reorder cards in DOM
+            function reorderCards(cardsArray) {
+                cardsArray.forEach(card => {
+                    projectsGrid.appendChild(card);
+                });
+            }
+
+            function filterProjects(filterValue) {
+                let visibleCount = 0;
+                const visibleCards = [];
+
+                // First, collect all visible cards
+                projectCards.forEach((card) => {
+                    const cardFilter = card.getAttribute('data-filter');
+                    const shouldShow = filterValue === 'all' || cardFilter === filterValue;
+                    
+                    if (shouldShow) {
+                        visibleCards.push(card);
+                    }
+                });
+
+                // If "all" is selected, shuffle the visible cards
+                if (filterValue === 'all' && visibleCards.length > 0) {
+                    const shuffledCards = shuffleArray(visibleCards);
+                    reorderCards(shuffledCards);
+                }
+
+                // Now show/hide cards with animation
+                projectCards.forEach((card, index) => {
+                    const cardFilter = card.getAttribute('data-filter');
+                    const shouldShow = filterValue === 'all' || cardFilter === filterValue;
+
+                    if (shouldShow) {
+                        card.style.display = '';
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.3s ease';
+                            card.style.opacity = '1';
+                        }, index * 50); // Stagger animation
+                        visibleCount++;
+                    } else {
+                        card.style.transition = 'opacity 0.3s ease';
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResultsMessage.style.display = 'block';
+                    projectsGrid.style.display = 'none';
+                } else {
+                    noResultsMessage.style.display = 'none';
+                    projectsGrid.style.display = '';
+                }
+            }
+
+            // Filter button event listeners
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value and filter projects
+                    const filterValue = this.getAttribute('data-filter');
+                    filterProjects(filterValue);
+                });
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>
