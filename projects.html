@@ -47,7 +47,7 @@
     <!-- Projects Gallery -->
     <section class="projects-section section">
         <div class="projects-grid container">
-            <div class="project-card" data-filter="case-study">
+            <div class="project-card" data-filter="case-study" data-order="6">
                 <div class="project-content">
                     <span class="project-category">UX Research & Visual Design</span>
                     <h3>Wander: Travel Assistant</h3>
@@ -63,7 +63,7 @@
                     <img src="assets/project1.png" alt="Wander Travel Assistant">
                 </div>
             </div>
-            <div class="project-card" data-filter="case-study">
+            <div class="project-card" data-filter="case-study" data-order="5">
                 <div class="project-content">
                     <span class="project-category">Interaction & Visual Design</span>
                     <h3>First Round: Job Matcher</h3>
@@ -78,7 +78,7 @@
                     <img src="assets/project2.png" alt="First Round Job Matcher">
                 </div>
             </div>
-            <div class="project-card" data-filter="case-study">
+            <div class="project-card" data-filter="case-study" data-order="4">
                 <div class="project-content">
                     <span class="project-category">Programming & Visual Design</span>
                     <h3>Palate: Restaurants Near Me</h3>
@@ -94,7 +94,7 @@
                     <img src="assets/project3.png" alt="Palate Restaurants Near Me">
                 </div>
             </div>
-            <div class="project-card" data-filter="redesign">
+            <div class="project-card" data-filter="redesign" data-order="2">
                 <div class="project-content">
                     <span class="project-category">UX & UI Redesign</span>
                     <h3>MDCaps: Maryland Financial Aid</h3>
@@ -109,7 +109,7 @@
                     <img src="assets/project4.png" alt="MDCaps Maryland Financial Aid">
                 </div>
             </div>
-            <div class="project-card" data-filter="graphic-design">
+            <div class="project-card" data-filter="graphic-design" data-order="3">
                 <div class="project-content">
                     <span class="project-category">Brand Identity & Visual Design</span>
                     <h3>CAACURH: Regional Leadership Conference Conference Design</h3>
@@ -126,7 +126,7 @@
                     <img src="assets/project7.png" alt="CAACURH Regional Leadership Conference">
                 </div>
             </div>
-            <div class="project-card" data-filter="industrial-design">
+            <div class="project-card" data-filter="industrial-design" data-order="7">
                 <div class="project-content">
                     <span class="project-category">3D Prototyping & Interaction Design</span>
                     <h3>Urban Drifters: Self-Driving Scooter</h3>
@@ -142,7 +142,7 @@
                     <img src="assets/scooter.png" alt="Urban Drifters">
                 </div>
             </div>
-            <div class="project-card" data-filter="industrial-design">
+            <div class="project-card" data-filter="industrial-design" data-order="1">
                 <div class="project-content">
                     <span class="project-category">3D Prototyping & Wearable Technology</span>
                     <h3>Exoskeleton Knee Brace: Stroke Patient Assistance</h3>
@@ -214,16 +214,6 @@
             const noResultsMessage = document.getElementById('no-results');
             const projectsGrid = document.querySelector('.projects-grid');
 
-            // Function to shuffle array (Fisher-Yates algorithm)
-            function shuffleArray(array) {
-                const shuffled = Array.from(array);
-                for (let i = shuffled.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-                }
-                return shuffled;
-            }
-
             // Function to reorder cards in DOM
             function reorderCards(cardsArray) {
                 cardsArray.forEach(card => {
@@ -245,10 +235,14 @@
                     }
                 });
 
-                // If "all" is selected, shuffle the visible cards
+                // If "all" is selected, sort by data-order in reverse chronological order (newest first)
                 if (filterValue === 'all' && visibleCards.length > 0) {
-                    const shuffledCards = shuffleArray(visibleCards);
-                    reorderCards(shuffledCards);
+                    visibleCards.sort((a, b) => {
+                        const orderA = parseInt(a.getAttribute('data-order')) || 0;
+                        const orderB = parseInt(b.getAttribute('data-order')) || 0;
+                        return orderB - orderA; // Descending order (newest first)
+                    });
+                    reorderCards(visibleCards);
                 }
 
                 // Now show/hide cards with animation
@@ -296,6 +290,9 @@
                     filterProjects(filterValue);
                 });
             });
+
+            // Initialize with "all" filter to show projects in reverse chronological order
+            filterProjects('all');
         });
     </script>
 </body>
