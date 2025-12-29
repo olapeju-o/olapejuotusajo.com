@@ -406,4 +406,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }, { passive: true });
     }
 
+    // Gallery background cycling for about page
+    const galleryBackground = document.querySelector('.gallery-background');
+    if (galleryBackground) {
+        const slides = galleryBackground.querySelectorAll('.gallery-slide');
+        let currentIndex = 0;
+        const imagesPerView = 3;
+        
+        // Function to show 3 images at a time
+        function showActiveImages() {
+            // Remove active class from all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            
+            // Add active class to current 3 images
+            for (let i = 0; i < imagesPerView; i++) {
+                const index = (currentIndex + i) % slides.length;
+                slides[index].classList.add('active');
+            }
+        }
+        
+        // Initialize with first 3 images
+        showActiveImages();
+        
+        // Cycle through images every 4 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showActiveImages();
+        }, 4000);
+    }
+
 }); 
