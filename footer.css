@@ -8,16 +8,19 @@
     border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-/* ---- Main row ---- */
+/* ---- Main row: brand | centered nav | icons (equal side columns) ---- */
 .site-footer__inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.5rem clamp(1.5rem, 5vw, 3rem);
-    display: flex;
+    padding-top: 1.15rem;
+    padding-bottom: 1.15rem;
+    padding-right: clamp(0.65rem, 1.8vw, 1.1rem);
+    padding-left: clamp(0.35rem, 1vw, 0.6rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
-    justify-content: flex-start;
-    gap: clamp(2rem, 5vw, 4rem);
-    flex-wrap: wrap;
+    column-gap: clamp(0.5rem, 1.5vw, 1rem);
+    row-gap: 0.75rem;
 }
 
 /* LEFT: name + lines (stacked, left-aligned) */
@@ -27,7 +30,8 @@
     align-items: flex-start;
     text-align: left;
     gap: 0.35rem;
-    flex-shrink: 0;
+    justify-self: start;
+    min-width: 0;
     max-width: min(100%, 20rem);
 }
 
@@ -64,13 +68,14 @@
     font-size: clamp(0.75rem, 1.4vw, 0.88rem);
 }
 
-/* CENTER: nav links */
+/* CENTER: site map — centered in the row between brand and icon links */
 .site-footer__nav {
     display: flex;
     align-items: center;
     gap: 1.75rem;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    justify-self: center;
 }
 
 .site-footer__nav a {
@@ -94,6 +99,8 @@
     align-items: center;
     gap: 1.1rem;
     flex-shrink: 0;
+    justify-self: end;
+    min-width: 0;
 }
 
 .site-footer__icon {
@@ -133,7 +140,7 @@
 /* ---- Copyright bar ---- */
 .site-footer__bar {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 0.65rem clamp(1.5rem, 5vw, 3rem);
+    padding: 0.55rem clamp(0.65rem, 1.8vw, 1.1rem) 0.55rem clamp(0.35rem, 1vw, 0.6rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,36 +166,43 @@
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
     .site-footer__inner {
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
-        gap: 1rem 1.5rem;
-        padding: 1.5rem;
+        gap: 1rem;
+        padding-top: 1.15rem;
+        padding-bottom: 1.15rem;
+        padding-right: clamp(0.65rem, 3vw, 1rem);
+        padding-left: clamp(0.35rem, 3vw, 0.75rem);
     }
 
     .site-footer__brand {
         max-width: 100%;
+        justify-self: auto;
     }
 
     .site-footer__nav {
         order: 3;
         width: 100%;
         justify-content: flex-start;
+        justify-self: auto;
         gap: 1.1rem;
         padding-top: 0.5rem;
         border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* Keep DOM order: brand → nav → icons (nav had order:3, icons defaulted to 0 and jumped ahead) */
+    /* Keep DOM order: brand → nav → icons */
     .site-footer__icons {
         order: 4;
         width: 100%;
         justify-content: flex-start;
+        justify-self: auto;
         padding-top: 0.35rem;
     }
 
     .site-footer__bar {
         justify-content: flex-start;
-        padding: 0.65rem 1.5rem;
+        padding: 0.55rem clamp(0.65rem, 3vw, 1rem) 0.55rem clamp(0.35rem, 3vw, 0.75rem);
     }
 }
 
