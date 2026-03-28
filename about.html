@@ -7,12 +7,14 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
-        <a class="nav-brand" href="index.html">Olapeju Otusajo / UX DESIGNER</a>
+        <a class="nav-brand" href="index.html">Olapeju Otusajo / PRODUCT DESIGNER</a>
         <ul class="nav-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
@@ -27,42 +29,23 @@
         </div>
     </nav>
     <section class="about-hero">
-        <video class="about-hero-video" autoplay muted loop playsinline>
-            <source src="assets/gallery.mp4" type="video/mp4">
-        </video>
+        <div class="about-hero__glow" aria-hidden="true"></div>
         <div class="about-container">
             <div class="about-photo">
-                <img src="assets/me.JPG" alt="Olapeju Otusajo">
+                <div class="about-photo-frame">
+                    <img src="assets/me2.jpeg" alt="Olapeju Otusajo">
+                </div>
             </div>
             <div class="about-text">
+                <p class="about-hero-eyebrow">Product designer &amp; strategic thinker</p>
                 <h2 class="about-title-enhanced">
-                    <span class="about-title-gradient">About Olapeju Otusajo</span>
+                    <span class="about-title-line">About</span>
+                    <span class="about-title-line about-title-line--accent">Olapeju Otusajo<span class="about-title-dot">.</span></span>
                 </h2>
                 <p>
-                    Hi! My name is Olapeju Otusajo, I am a Nigerian American UX Designer. I have a background in fashion design where I discovered my passion for user experience design by recognizing the parallels between crafting seamless physical experiences and designing intuitive digital interactions. I have completed my Bachelors of Science in Information Systems from the University of Maryland Baltimore County and I am currently studying at Carnegie Mellon University to complete my Masters in Human Computer Interaction.
+                    Hi! My name is Olapeju Otusajo, I am a Nigerian American product designer. I have a background in fashion design where I discovered my passion for product design by recognizing the parallels between crafting seamless physical experiences and designing intuitive digital interactions. I have completed my Bachelors of Science in Information Systems from the University of Maryland Baltimore County and I am currently studying at Carnegie Mellon University to complete my Masters in Human Computer Interaction.
                 </p>
             </div>
-        </div>
-    </section>
-
-    <!-- My Story Section -->
-    <section id="my-story" class="my-story-section">
-        <h3 class="story-title">My Story</h3>
-        <div class="story-container">
-            <div class="story-content">
-                <div class="story-meta">
-                    <div class="story-date">Updated: June 2025</div>
-                    <div class="story-tags">
-                        <span class="story-tag">#UX Journey</span>
-                        <span class="story-tag">#Research</span>
-                        <span class="story-tag">#Education</span>
-                        <span class="story-tag">#Growth</span>
-                    </div>
-                </div>
-                <p class="story-paragraph">Though I’d like to say my journey into user experience began the first time I picked up a needle and thread to bring my fashion sketches to life, I didn’t fully understand what UX was until much later. My journey truly began after first hearing about the field from a UX designer at a conference. Curious, I started researching concepts and teaching myself how to use design software like Figma. I learned even more when I was accepted into IBM's Accelerate Design Program in the summer of 2023. I spent hours each day after returning from my internship working on case studies and strengthening both my skills and understanding and even began my first course offered by Google's UX Design Certificate Program.</p>
-                <p class="story-paragraph"> My passion for UX deepened during my time as a student researcher in the Affective Computing Lab at UMBC, where I studied human behavior and interaction dynamics through detailed observational research. Guided by my research mentor, Dr. Andrea Kleinsmith, this experience inspired me to pursue an accelerated Master’s in Human-Centered Computing alongside my undergraduate studies. I began to realize that my love for fashion design was rooted in a desire to connect with people and understand their needs. Meanwhile, my studies in Information Systems equipped me with the technical skills to translate those insights into functional, user-centered solutions.</p>
-                <p class="story-paragraph">Motivated to turn this passion into a career, I completed my UX design training through the Google Coursera Certificate Program. There, I honed skills in wireframing, prototyping, and user-centered design. Since then, I’ve conducted user research, built case studies, and continuously refined my portfolio driven by a mindset of lifelong learning. I am currently pursuing my Master’s in Human-Computer Interaction at Carnegie Mellon University. I'm excited to continue growing as a designer and creating meaningful experiences that make a real difference in people’s lives.</p>
-                </div>
         </div>
     </section>
 
@@ -90,13 +73,12 @@
             <img class="fun-fact-avatar" src="assets/me3.jpg" alt="Avatar">
             <span class="fun-fact-username">@olapejuotusajo</span>
           </div>
-          <img class="fun-fact-story" src="assets/sky.jpg" alt="Conference Leadership">
-          <p>I enjoy taking pictures of the sky!</p>
+          <img class="fun-fact-story" src="assets/wearable1.jpg" alt="Transformable foam business card that becomes a bracelet">
+          <p>I created the first transformable wearable business cards out of foam! Each one converts from a flat card into a bracelet so networking stays tactile and impactful.</p>
           <div class="fun-fact-tags">
-            <span class="fun-fact-chip">#photography</span>
-            <span class="fun-fact-chip">#nature</span>
-            <span class="fun-fact-chip">#skygazer</span>
-            <span class="fun-fact-chip">#professionalcloudwatcher</span>
+            <span class="fun-fact-chip">#wearable</span>
+            <span class="fun-fact-chip">#businesscards</span>
+            <span class="fun-fact-chip">#innovation</span>
           </div>
           <div class="fun-fact-actions">
             <span class="fun-fact-like"><i class="fa fa-heart"></i> 2.4k</span>
@@ -142,7 +124,7 @@
             <span class="fun-fact-username">@olapejuotusajo</span>
           </div>
           <img class="fun-fact-story" src="assets/dress.jpg" alt="Dress">
-          <p>I started my journey in fashion design which introduced me to the world of UX design!</p>
+          <p>I started my journey in fashion design which introduced me to the world of product design!</p>
           <div class="fun-fact-tags">
             <span class="fun-fact-chip">#fashion</span>
             <span class="fun-fact-chip">#design</span>
@@ -221,47 +203,51 @@
         </div>
       </div>
     </section>
+     <!-- My Story Section -->
+     <section id="my-story" class="my-story-section">
+      <h3 class="story-title">My Story</h3>
+      <div class="story-container">
+          <div class="story-content">
+              <div class="story-meta">
+                  <div class="story-date">Updated: June 2025</div>
+                  <div class="story-tags">
+                      <span class="story-tag">#Product journey</span>
+                      <span class="story-tag">#Research</span>
+                      <span class="story-tag">#Education</span>
+                      <span class="story-tag">#Growth</span>
+                  </div>
+              </div>
+              <p class="story-paragraph">Though I’d like to say my journey into product design began the first time I picked up a needle and thread to bring my fashion sketches to life, I didn’t fully understand what that path could look like until much later. My journey truly began after first hearing about the field from a product designer at a conference. Curious, I started researching concepts and teaching myself how to use design software like Figma. I learned even more when I was accepted into IBM's Accelerate Design Program in the summer of 2023. I spent hours each day after returning from my internship working on case studies and strengthening both my skills and understanding and even began my first course offered by Google's UX Design Certificate Program.</p>
+              <p class="story-paragraph"> My passion for product design deepened during my time as a student researcher in the Affective Computing Lab at UMBC, where I studied human behavior and interaction dynamics through detailed observational research. Guided by my research mentor, Dr. Andrea Kleinsmith, this experience inspired me to pursue an accelerated Master’s in Human-Centered Computing alongside my undergraduate studies. I began to realize that my love for fashion design was rooted in a desire to connect with people and understand their needs. Meanwhile, my studies in Information Systems equipped me with the technical skills to translate those insights into functional, user-centered solutions.</p>
+              <p class="story-paragraph">Motivated to turn this passion into a career, I completed my product design training through the Google UX Design Certificate program on Coursera. There, I honed skills in wireframing, prototyping, and user-centered design. Since then, I’ve conducted user research, built case studies, and continuously refined my portfolio driven by a mindset of lifelong learning. I am currently pursuing my Master’s in Human-Computer Interaction at Carnegie Mellon University. I'm excited to continue growing as a designer and creating meaningful experiences that make a real difference in people’s lives.</p>
+              </div>
+      </div>
+  </section>
 
 
-    <footer class="enhanced-footer">
-        <div class="footer-container footer-flex-main">
-            <div class="footer-left">
-                <div class="footer-line creative-line">
-                    <span class="creative-text">Let's get creative!</span>
-                    <a href="mailto:olapeju.s.otusajo@gmail.com" class="cta-footer-btn"><i class="fas fa-envelope"></i> Let's Chat!</a>
-                </div>
-                <div class="footer-line">
-                    <div class="contact-info">
-                        <a href="https://www.linkedin.com/in/olapejuotusajo/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="mailto:olapeju.s.otusajo@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>olapeju.s.otusajo@gmail.com</span>
-                        </a>
-                        <a href="tel:+14435158476" class="contact-link">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (443) 515-8476</span>
-                        </a>
-                    </div>
-                </div>
+    <footer class="site-footer" role="contentinfo">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <a href="index.html" class="site-footer__name">Olapeju Otusajo</a>
+                <p class="site-footer__line site-footer__line--accent">Let&rsquo;s build something meaningful together.</p>
+                <p class="site-footer__line site-footer__line--meta">MHCI @ CMU ·</p>
             </div>
-            <div class="footer-right">
-                <div class="footer-line">
-                    <div class="sitemap-links">
-                        <a href="index.html">Home</a>
-                        <a href="projects.html">Projects</a>
-                        <a href="about.html">About Me</a>
-                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-                    </div>
-                </div>
+            <nav class="site-footer__nav" aria-label="Footer">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About Me</a>
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+            <div class="site-footer__icons">
+                <a href="https://www.linkedin.com/in/olapejuotusajo/" class="site-footer__icon site-footer__icon--labeled" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="site-footer__icon-text">LinkedIn</span></a>
+                <a href="resume.pdf" class="site-footer__icon site-footer__icon--labeled" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i><span class="site-footer__icon-text">Resume</span></a>
             </div>
         </div>
-        <div class="footer-copyright-section">
-            <p class="copyright">&copy; 2025 <a href="index.html" class="footer-link">Olapeju Otusajo</a>. All rights reserved.</p>
+        <div class="site-footer__bar">
+            <p class="site-footer__copy">&copy; 2026 <a href="index.html">Olapeju Otusajo</a>. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
-</html> 
+</html>

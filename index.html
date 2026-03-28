@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Olapeju Otusajo — Product Designer &amp; Strategic Thinker</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
+
     <nav class="navbar">
-        <a class="nav-brand" href="index.html">Olapeju Otusajo / UX DESIGNER</a>
+        <a class="nav-brand" href="index.html">Olapeju Otusajo / PRODUCT DESIGNER</a>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
@@ -22,34 +23,187 @@
             <li><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
             <li><a href="https://www.linkedin.com/in/olapejuotusajo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
         </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
     </nav>
 
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
+    <section id="home" class="lp-hero">
+        <video class="lp-hero-video" autoplay muted loop playsinline>
             <source src="assets/movie.mp4" type="video/mp4">
         </video>
-        <div class="hero-content">
-            <h1>Hi! I am <a href="about.html" class="highlight-name">Olapeju Otusajo</a> and this is my...</h1>
-            <p><span class="hero-cursive">UX Portfolio</span></p>
-            <div class="tagline-container">
-                <span class="tagline">Where Empathy Meets Innovation</span>
-                <span class="tagline-separator"></span>
-                <span class="tagline">Designing for Impact and Inclusion</span>
+
+        <!-- Left: Text -->
+        <div class="lp-hero-inner">
+
+            <!-- Role label — only visible while hovering a mosaic tile with a category -->
+            <div class="lp-grid-label" aria-live="polite" aria-hidden="true">
+                <span class="lp-label-the">The</span>
+                <span class="lp-grid-category"></span>
+                <span class="lp-label-designer">Designer</span>
             </div>
-            <div class="hero-buttons">
-                <a href="about.html" class="about-button">About Olapeju</a>
-                <a href="projects.html" class="about-button">My Work</a>
+
+            <h1 class="lp-hero-name">
+                <span class="lp-name-line lp-name-first">Olapeju</span>
+                <span class="lp-name-line lp-name-last">Otusajo<span class="lp-period">.</span></span>
+            </h1>
+            <p class="lp-hero-role">Designing at the intersection of<br>user empathy &amp; product strategy.</p>
+            <p class="lp-hero-meta">
+                <span class="lp-meta-item">MHCI @ Carnegie Mellon</span>
+                <span class="lp-meta-dot">&middot;</span>
+                <span class="lp-meta-item">Open to PM &amp; product roles</span>
+            </p>
+            <div class="lp-hero-ctas">
+                <a href="projects.html" class="lp-cta-primary">View My Work</a>
+                <a href="about.html" class="lp-cta-secondary">About Me</a>
             </div>
+
+            <!-- Shown when portrait is hovered: sits in whitespace left of grid, line points toward name -->
+            <div class="lp-me-gutter-label" aria-hidden="true">
+                <div class="lp-scroll-line lp-me-gutter-label__line" aria-hidden="true"></div>
+                <span class="lp-scroll-label">That&rsquo;s me!</span>
+            </div>
+        </div>
+
+        <!-- Right: hover cue + image mosaic (cue sits beside grid, not on it) -->
+        <div class="lp-hero-mosaic-rail">
+            <div class="lp-mosaic-hover-hint" aria-hidden="true">
+                <div class="lp-mosaic-hover-hint__row">
+                    <div class="lp-mosaic-hover-hint-copy">
+                        <span class="lp-instruction-sub">Hover over here!</span>
+                    </div>
+                    <div class="lp-scroll-line lp-mosaic-hover-hint__line" aria-hidden="true"></div>
+                </div>
+            </div>
+            <div class="lp-hero-mosaic-wrap">
+                <div class="lp-hero-image-grid">
+                    <div class="lp-grid-item lp-grid-me">
+                        <img src="assets/me.jpg" alt="Olapeju Otusajo">
+                    </div>
+                    <div class="lp-grid-item lp-grid-gallery" data-category="Fashion">
+                        <img src="assets/gallery.jpg" alt="Fashion design project">
+                    </div>
+                    <div class="lp-grid-item lp-grid-wander" data-category="Interaction">
+                        <img src="assets/project1.png" alt="Wander travel app">
+                    </div>
+                    <div class="lp-grid-item lp-grid-wearable" data-category="Product">
+                        <img src="assets/wearable.jpg" alt="wearable project">
+                    </div>
+                    <div class="lp-grid-item lp-grid-palate" data-category="Visual">
+                        <img src="assets/palatebanner.png" alt="Palate project">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lp-scroll-hint">
+            <span class="lp-scroll-label">Scroll</span>
+            <div class="lp-scroll-line"></div>
         </div>
     </section>
 
+    <!-- Selected Projects -->
+    <section class="lp-projects-section">
+        <div class="lp-projects-header">
+            <div class="lp-projects-header-left">
+                <p class="lp-section-eyebrow">Selected Work</p>
+                <h2 class="lp-section-title">I feel like you might be looking<br>for my recent work...</h2>
+            </div>
+            <a href="projects.html" class="lp-view-all">View all projects <span class="lp-arrow">&rarr;</span></a>
+        </div>
+        <div class="lp-projects-grid">
+            <a href="wander.html" class="lp-project-card lp-project-card--wander-cover">
+                <div class="lp-card-image">
+                    <img src="assets/wander.jpg" alt="Wander travel app">
+                    <span class="lp-card-tag">Interaction design &amp; product research</span>
+                </div>
+                <div class="lp-card-body">
+                    <h3 class="lp-card-title">Wander</h3>
+                    <p class="lp-card-desc">This project is the first product design case study that I created while completing the Google UX Design Certificate program. Inspired by a near-missed flight, I created this project. I looked closely into the problem space of traveling, aiming to address pain points head-on.</p>
+                    <span class="lp-card-link">View project &rarr;</span>
+                </div>
+            </a>
+            <a href="scooter.html" class="lp-project-card">
+                <div class="lp-card-image">
+                    <img src="assets/scooter.png" alt="Urban Drifters semi-autonomous scooter project">
+                    <span class="lp-card-tag">Industrial &amp; Interaction Design</span>
+                </div>
+                <div class="lp-card-body">
+                    <h3 class="lp-card-title">Urban Drifters</h3>
+                    <p class="lp-card-desc">This human-centered interaction project explores a semi-autonomous scooter I co-led as Interaction Designer and lead prototyper, focused on how riders juggle navigation, braking, and mode changes in dense cities.</p>
+                    <span class="lp-card-link">View project &rarr;</span>
+                </div>
+            </a>
+            <a href="firstround.html" class="lp-project-card lp-project-card--firstround-zoom">
+                <div class="lp-card-image">
+                    <img src="assets/firstround.png" alt="First Round job matching app">
+                    <span class="lp-card-tag">Visual &amp; Graphic Design</span>
+                </div>
+                <div class="lp-card-body">
+                    <h3 class="lp-card-title">First Round</h3>
+                    <p class="lp-card-desc">The branding and user interface for a job matcher I wish existed during my job search. This sprint expanded from sketch to logo, a final, comprehensive exploration into color, tone, and palette, and then finally screens and a mobile prototype, which allowed me to practice moving from graphic intent to layout.</p>
+                    <span class="lp-card-link">View project &rarr;</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <a href="index.html" class="site-footer__name">Olapeju Otusajo</a>
+                <p class="site-footer__line site-footer__line--accent">Let&rsquo;s build something meaningful together.</p>
+                <p class="site-footer__line site-footer__line--meta">MHCI @ CMU ·</p>
+            </div>
+            <nav class="site-footer__nav" aria-label="Footer">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About Me</a>
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+            <div class="site-footer__icons">
+                <a href="https://www.linkedin.com/in/olapejuotusajo/" class="site-footer__icon site-footer__icon--labeled" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="site-footer__icon-text">LinkedIn</span></a>
+                <a href="resume.pdf" class="site-footer__icon site-footer__icon--labeled" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i><span class="site-footer__icon-text">Resume</span></a>
+            </div>
+        </div>
+        <div class="site-footer__bar">
+            <p class="site-footer__copy">&copy; 2026 <a href="index.html">Olapeju Otusajo</a>. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+
+    <script>
+    (function () {
+        var grid       = document.querySelector('.lp-hero-image-grid');
+        var labelRoot  = document.querySelector('.lp-grid-label');
+        var categoryEl = document.querySelector('.lp-grid-category');
+        if (!grid || !labelRoot || !categoryEl) return;
+
+        var items = grid.querySelectorAll('.lp-grid-item[data-category]');
+
+        items.forEach(function (item) {
+            item.addEventListener('mouseenter', function () {
+                categoryEl.textContent = item.dataset.category;
+                categoryEl.classList.add('lp-label-active');
+                labelRoot.classList.add('lp-label-is-open');
+                labelRoot.classList.add('lp-label-visible');
+                labelRoot.setAttribute('aria-hidden', 'false');
+            });
+            item.addEventListener('mouseleave', function () {
+                categoryEl.classList.remove('lp-label-active');
+                labelRoot.classList.remove('lp-label-is-open');
+                labelRoot.classList.remove('lp-label-visible');
+                labelRoot.setAttribute('aria-hidden', 'true');
+                categoryEl.addEventListener('transitionend', function clear(te) {
+                    if (te.propertyName !== 'max-width') return;
+                    if (!categoryEl.classList.contains('lp-label-active')) {
+                        categoryEl.textContent = '';
+                    }
+                    categoryEl.removeEventListener('transitionend', clear);
+                });
+            });
+        });
+    })();
+    </script>
+
 </body>
-</html> 
+</html>

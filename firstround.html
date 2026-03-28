@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <nav class="navbar">
-        <a class="nav-brand" href="index.html">Olapeju Otusajo / UX DESIGNER</a>
+        <a class="nav-brand" href="index.html">Olapeju Otusajo / PRODUCT DESIGNER</a>
         <ul class="nav-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
@@ -51,17 +52,17 @@
             </div>
         </section>
 
-        <section class="project-timeline-details-section">
-            <div class="project-timeline-details-container">
-                <div class="project-timeline-details-column">
-                    <h3 class="project-timeline-details-heading">Project Timeline</h3>
-                    <p>October 2024 - Present</p>
+        <section class="fr4-timeline">
+            <div class="fr4-timeline-wrapper">
+                <div class="fr4-timeline-column">
+                    <h3 class="fr4-timeline-heading">Project Timeline</h3>
+                    <p class="fr4-text fr4-timeline-meta">October 2024 - Present</p>
                 </div>
-                <div class="project-timeline-details-column">
-                    <h3 class="project-timeline-details-heading">Project Details</h3>
-                    <div class="project-timeline-details-tags">
-                        <span class="project-timeline-details-tag">Personal Project</span>
-                        <span class="project-timeline-details-tag">Visual Design</span>
+                <div class="fr4-timeline-column">
+                    <h3 class="fr4-timeline-heading">Project Details</h3>
+                    <div class="fr4-timeline-tags">
+                        <span class="fr4-timeline-tag">Personal Project</span>
+                        <span class="fr4-timeline-tag">Visual Design</span>
                     </div>
                 </div>
             </div>
@@ -260,7 +261,7 @@
                     </div>
                     <div class="fr4-final-block">
                         <h3 class="fr4-content-title">Reflection</h3>
-                        <p class="fr4-text">Through this case study, I was able to enhance my visual design skills by deeply assessing the graphic design side of product design, considering branding, color schemes, and the subliminal messages conveyed to users through first impressions and design decisions. This taught me that every design choice needs a clear rationale and careful consideration of its impact on user experience.
+                        <p class="fr4-text">Through this case study, I was able to enhance my visual design skills by deeply assessing the graphic design side of product design, considering branding, color schemes, and the subliminal messages conveyed to users through first impressions and design decisions. This taught me that every design choice needs a clear rationale and careful consideration of its impact on the product experience.
 
                             Throughout the project, I applied these insights to my first draft, which had a solid information layout but offered many opportunities for growth in aesthetics. I realized that the visual balance of a mobile app greatly influences a user’s likelihood to engage with it. I carefully prioritized information based on user intent. For example, when a user is trying to set a meeting with an applicant, I ensured that date and time selection was immediately visible and prominent, enhancing the overall user journey.
                             
@@ -296,45 +297,6 @@
         </section>
 
     </main>
-    <footer class="enhanced-footer">
-        <div class="footer-container footer-flex-main">
-            <div class="footer-left">
-                <div class="footer-line creative-line">
-                    <span class="creative-text">Let's get creative!</span>
-                    <a href="mailto:olapeju.s.otusajo@gmail.com" class="cta-footer-btn"><i class="fas fa-envelope"></i> Let's Chat!</a>
-                </div>
-                <div class="footer-line">
-                    <div class="contact-info">
-                        <a href="https://www.linkedin.com/in/olapejuotusajo/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="mailto:olapeju.s.otusajo@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>olapeju.s.otusajo@gmail.com</span>
-                        </a>
-                        <a href="tel:+14435158476" class="contact-link">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (443) 515-8476</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-right">
-                <div class="footer-line">
-                    <div class="sitemap-links">
-                        <a href="index.html">Home</a>
-                        <a href="projects.html">Projects</a>
-                        <a href="about.html">About Me</a>
-                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright-section">
-            <p class="copyright">&copy; 2025 <a href="index.html" class="footer-link">Olapeju Otusajo</a>. All rights reserved.</p>
-        </div>
-    </footer>
     <script src="script.js"></script>
     <script>
         // Project data
@@ -383,5 +345,7 @@
         // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', populateMoreProjects);
     </script>
+    <div id="site-footer-mount"></div>
+    <script src="footer-include.js" defer></script>
 </body>
 </html>

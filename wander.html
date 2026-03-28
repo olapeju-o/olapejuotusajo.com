@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <nav class="navbar">
-        <a class="nav-brand" href="index.html">Olapeju Otusajo / UX DESIGNER</a>
+        <a class="nav-brand" href="index.html">Olapeju Otusajo / PRODUCT DESIGNER</a>
         <ul class="nav-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
@@ -38,7 +39,7 @@
         <section class="w2-overview">
             <div class="w2-overview-wrapper">
                 <h3 class="w2-section-title">Overview</h3>
-                <p class="w2-text">Wander is my first UX design project and helped me learn the fundamentals of Figma as well as the process of designing a user-centered product. This case study is the result of completing my Google UX Design Certificate and is my most comprehensive project to date. Wander is a travel assistant app designed to simplify and enhance the trip-planning experience by focusing on collaboration and convenience. It offers a comprehensive, all-in-one platform where users can collaboratively organize every aspect of their trip, from destination discovery to itinerary management.</p>
+                <p class="w2-text">Wander is my first product design project and helped me learn the fundamentals of Figma as well as the process of designing a user-centered product. This case study is the result of completing my Google UX Design Certificate and is my most comprehensive project to date. Wander is a travel assistant app designed to simplify and enhance the trip-planning experience by focusing on collaboration and convenience. It offers a comprehensive, all-in-one platform where users can collaboratively organize every aspect of their trip, from destination discovery to itinerary management.</p>
                 
                 <h3 class="w2-section-title">Problem Statement</h3>
                 <p class="w2-text">Planning trips can be overwhelming, especially when you need to manage multiple elements such as flights, hotels, activities, and reservations. It's very easy to lose track of key details like confirmation numbers, travel times, and reservation dates when this information is stored across numerous apps, emails, and websites. Travelers often struggle with accessing the right details at the right time, leading to missed flights, potential holding up lines, and unnecessary stress.</p>
@@ -362,7 +363,7 @@
                     <h3 class="w2-content-title">Skills Used</h3>
                     <div class="w2-skills">
                         <span class="w2-skill-tag">Prototyping</span>
-                        <span class="w2-skill-tag">UX Research</span>
+                        <span class="w2-skill-tag">Product research</span>
                         <span class="w2-skill-tag">Visual Design</span>
                         <span class="w2-skill-tag">User-Centered Design</span>
                         <span class="w2-skill-tag">Feedback Integration</span>
@@ -396,50 +397,11 @@
             </div>
         </section>
     </main>
-    <footer class="enhanced-footer">
-        <div class="footer-container footer-flex-main">
-            <div class="footer-left">
-                <div class="footer-line creative-line">
-                    <span class="creative-text">Let's get creative!</span>
-                    <a href="mailto:olapeju.s.otusajo@gmail.com" class="cta-footer-btn"><i class="fas fa-envelope"></i> Let's Chat!</a>
-                </div>
-                <div class="footer-line">
-                    <div class="contact-info">
-                        <a href="https://www.linkedin.com/in/olapejuotusajo/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="mailto:olapeju.s.otusajo@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>olapeju.s.otusajo@gmail.com</span>
-                        </a>
-                        <a href="tel:+14435158476" class="contact-link">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (443) 515-8476</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-right">
-                <div class="footer-line">
-                    <div class="sitemap-links">
-                        <a href="index.html">Home</a>
-                        <a href="projects.html">Projects</a>
-                        <a href="about.html">About Me</a>
-                        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright-section">
-            <p class="copyright">&copy; 2025 <a href="index.html" class="footer-link">Olapeju Otusajo</a>. All rights reserved.</p>
-        </div>
-    </footer>
     <script src="script.js"></script>
     <script>
         // Project data
         const projects = [
-            { id: 1, title: "Wander", subtitle: "Travel Assistant", image: "assets/project1.png", link: "project1.html", type: "case-study" },
+            { id: 1, title: "Wander", subtitle: "Travel Assistant", image: "assets/project1.png", link: "wander.html", type: "case-study" },
             { id: 2, title: "First Round", subtitle: "Job Matcher", image: "assets/project2.png", link: "firstround.html", type: "case-study" },
             { id: 3, title: "Palate", subtitle: "Restaurants Near Me", image: "assets/project3.png", link: "palate.html", type: "case-study" },
             { id: 4, title: "MDCaps", subtitle: "Maryland Financial Aid", image: "assets/project4.png", link: "mdcaps.html", type: "redesign" },
@@ -483,5 +445,7 @@
         // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', populateMoreProjects);
     </script>
+    <div id="site-footer-mount"></div>
+    <script src="footer-include.js" defer></script>
 </body>
 </html>
