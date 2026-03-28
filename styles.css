@@ -5315,12 +5315,18 @@ html { scroll-padding-top: 80px; }
 
 /* Wander card: pan crop so the artwork reads centered (source frame leans left under cover) */
 .lp-project-card--wander-cover .lp-card-image img {
-    object-position: 42% center;
+    object-position: 42% 70%;
 }
 
 /* First Round card: tighter crop / zoom on the preview image */
 .lp-project-card--firstround-zoom .lp-card-image img {
     transform: scale(1.22);
+    transform-origin: 50% 42%;
+}
+
+/* Hover: zoom in further (~same relative bump as 1 → 1.04 on other cards), not down to 1.04 */
+.lp-project-card--firstround-zoom:hover .lp-card-image img {
+    transform: scale(1.27);
     transform-origin: 50% 42%;
 }
 
