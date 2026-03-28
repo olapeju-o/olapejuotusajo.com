@@ -15,8 +15,9 @@
     padding: 1.5rem clamp(1.5rem, 5vw, 3rem);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: flex-start;
+    gap: clamp(2rem, 5vw, 4rem);
+    flex-wrap: wrap;
 }
 
 /* LEFT: name + lines (stacked, left-aligned) */
@@ -69,7 +70,7 @@
     align-items: center;
     gap: 1.75rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .site-footer__nav a {
@@ -175,6 +176,14 @@
         gap: 1.1rem;
         padding-top: 0.5rem;
         border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Keep DOM order: brand → nav → icons (nav had order:3, icons defaulted to 0 and jumped ahead) */
+    .site-footer__icons {
+        order: 4;
+        width: 100%;
+        justify-content: flex-start;
+        padding-top: 0.35rem;
     }
 
     .site-footer__bar {
