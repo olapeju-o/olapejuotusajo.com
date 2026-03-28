@@ -1693,6 +1693,20 @@ footer {
     border-radius: 2px;
 }
 
+.story-title-accent {
+    color: var(--primary-color);
+}
+
+.story-title-line2,
+.fun-facts-title-line2 {
+    display: block;
+    margin-top: 0.35em;
+    font-size: 0.68em;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: inherit;
+}
+
 .story-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -1786,10 +1800,15 @@ footer {
     color: var(--text-color);
     margin-bottom: 42px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0;
     position: relative;
+}
+
+.fun-facts-title-line1 {
+    display: block;
 }
 
 .fun-facts-title::after {
@@ -1807,6 +1826,10 @@ footer {
 .fun-facts-highlight {
     color: var(--primary-color);
     font-weight: 900;
+}
+
+.fun-facts-title-accent {
+    color: var(--primary-color);
 }
 
 .fun-fact-card {
