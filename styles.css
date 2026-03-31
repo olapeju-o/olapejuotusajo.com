@@ -1067,6 +1067,118 @@ body {
     }
 }
 
+/* ----- Projects page typography (matches index / lp-* patterns) ----- */
+body.projects-page .projects-header__eyebrow {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+    margin: 0 0 0.65rem;
+}
+
+body.projects-page .projects-header__title {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 var(--spacing-md);
+}
+
+body.projects-page .projects-header__title-accent {
+    color: var(--primary-color);
+}
+
+body.projects-page .projects-intro {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--font-size-base);
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65;
+    color: #666666;
+}
+
+body.projects-page .projects-intro__lead {
+    display: block;
+}
+
+body.projects-page .projects-intro__accent {
+    display: block;
+    margin-top: 0.4em;
+    color: var(--primary-color);
+}
+
+body.projects-page .filter-btn {
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+body.projects-page .project-content {
+    font-family: 'Manrope', sans-serif;
+}
+
+body.projects-page .project-category {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.35;
+    border-radius: 9999px;
+    padding: 0.35rem 0.85rem;
+    text-transform: uppercase;
+}
+
+body.projects-page .project-content h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    color: #111111;
+}
+
+body.projects-page .project-content p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #666666;
+}
+
+body.projects-page .project-tags span {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+body.projects-page .view-project {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+body.projects-page .no-results-message {
+    font-family: 'Manrope', sans-serif;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: #666666;
+}
+
+@media (max-width: 768px) {
+    body.projects-page .projects-header__title {
+        font-size: clamp(1.55rem, 6vw, 2.2rem);
+    }
+
+    body.projects-page .projects-intro {
+        font-size: var(--font-size-sm);
+    }
+}
+
 /* ============================================
    SKILLS
    ============================================ */
@@ -1693,20 +1805,6 @@ footer {
     border-radius: 2px;
 }
 
-.story-title-accent {
-    color: var(--primary-color);
-}
-
-.story-title-line2,
-.fun-facts-title-line2 {
-    display: block;
-    margin-top: 0.35em;
-    font-size: 0.68em;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    color: inherit;
-}
-
 .story-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -1800,15 +1898,10 @@ footer {
     color: var(--text-color);
     margin-bottom: 42px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0;
+    gap: 0.5rem;
     position: relative;
-}
-
-.fun-facts-title-line1 {
-    display: block;
 }
 
 .fun-facts-title::after {
@@ -1826,10 +1919,6 @@ footer {
 .fun-facts-highlight {
     color: var(--primary-color);
     font-weight: 900;
-}
-
-.fun-facts-title-accent {
-    color: var(--primary-color);
 }
 
 .fun-fact-card {
@@ -5230,10 +5319,6 @@ html { scroll-padding-top: 80px; }
     margin: 0;
 }
 
-.lp-section-title-accent {
-    color: var(--primary-color);
-}
-
 .lp-view-all {
     display: inline-flex;
     align-items: center;
@@ -5315,18 +5400,12 @@ html { scroll-padding-top: 80px; }
 
 /* Wander card: pan crop so the artwork reads centered (source frame leans left under cover) */
 .lp-project-card--wander-cover .lp-card-image img {
-    object-position: 42% 70%;
+    object-position: 42% center;
 }
 
 /* First Round card: tighter crop / zoom on the preview image */
 .lp-project-card--firstround-zoom .lp-card-image img {
     transform: scale(1.22);
-    transform-origin: 50% 42%;
-}
-
-/* Hover: zoom in further (~same relative bump as 1 → 1.04 on other cards), not down to 1.04 */
-.lp-project-card--firstround-zoom:hover .lp-card-image img {
-    transform: scale(1.27);
     transform-origin: 50% 42%;
 }
 
