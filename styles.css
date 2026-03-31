@@ -1108,6 +1108,7 @@ body.projects-page .projects-intro__lead {
 body.projects-page .projects-intro__accent {
     display: block;
     margin-top: 0.4em;
+    font-size: clamp(0.78rem, 1.15vw, 0.875rem);
     color: var(--primary-color);
 }
 
