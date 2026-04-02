@@ -5320,6 +5320,10 @@ html { scroll-padding-top: 80px; }
     margin: 0;
 }
 
+.lp-section-title-accent {
+    color: var(--primary-color);
+}
+
 .lp-view-all {
     display: inline-flex;
     align-items: center;
