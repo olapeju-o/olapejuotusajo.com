@@ -4723,7 +4723,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Manrope', sans-serif; }
 .sc5-demo { padding: 5rem 0; }
 .sc5-demo-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 .sc5-video { margin-top: 2rem; }
-.sc5-video video { width: 100%; max-width: 960px; display: block; border-radius: 8px; border: 1px solid var(--border-color); }
+.sc5-video video { width: 100%; max-width: 960px; display: block; border-radius: 8px; border: 1px solid var(--border-color); height: auto; }
 
 .sc5-more { padding: 5rem 0; }
 .sc5-more-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
