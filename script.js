@@ -53,6 +53,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 const contactForm = document.getElementById('contact-form');
 
+if (contactForm) {
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -72,20 +73,7 @@ contactForm.addEventListener('submit', function(e) {
 
     contactForm.reset();
 });
-
-
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(24, 25, 28, 0.98)';
-        navbar.style.backdropFilter = 'blur(20px)';
-        navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.25)';
-    } else {
-        navbar.style.background = 'rgba(24, 25, 28, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-        navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.25)';
-    }
-});
+}
 
 
 const skillTags = document.querySelectorAll('.skill-tags span');
@@ -121,54 +109,8 @@ document.querySelectorAll('.scroll-item').forEach(item => {
     });
 });
 
-// Project filtering functionality - Initialize on page load
-function initProjectFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card[data-category]');
-    
-    if (filterButtons.length > 0 && projectCards.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                this.classList.add('active');
-                
-                // Get filter value
-                const filterValue = this.getAttribute('data-filter');
-                
-                // Filter project cards with animation
-                projectCards.forEach((card, index) => {
-                    const category = card.getAttribute('data-category');
-                    const shouldShow = filterValue === 'all' || category === filterValue;
-                    
-                    if (shouldShow) {
-                        // Show card with fade-in
-                        card.style.display = '';
-                        card.style.opacity = '0';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                        }, index * 50); // Stagger animation
-                    } else {
-                        // Hide card with fade-out
-                        card.style.opacity = '0';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-    }
-}
-
 // Mobile navigation buttons for projects page
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize project filters
-    initProjectFilters();
     const mobileNavButtons = document.querySelectorAll('.mobile-nav-btn');
     console.log('Found mobile nav buttons:', mobileNavButtons.length); // Debug log
     

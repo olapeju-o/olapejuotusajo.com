@@ -121,7 +121,7 @@
             <span class="fun-fact-like"><i class="fa fa-heart"></i> 2.7k</span>
           </div>
         </div>
-        <div class="fun-fact-card">
+        <div id="fashion-design" class="fun-fact-card">
           <div class="fun-fact-header">
             <img class="fun-fact-avatar" src="assets/me3.jpg" alt="Avatar">
             <span class="fun-fact-username">@olapejuotusajo</span>
@@ -209,21 +209,45 @@
      <!-- My Story Section -->
      <section id="my-story" class="my-story-section">
       <h3 class="story-title">Wanna know me even <span class="story-title-accent">more</span>?<br><span class="story-title-line2">Here&rsquo;s the story of my life!</span></h3>
-      <div class="story-container">
-          <div class="story-content">
-              <div class="story-meta">
-                  <div class="story-date">Updated: June 2025</div>
-                  <div class="story-tags">
-                      <span class="story-tag">#Product journey</span>
-                      <span class="story-tag">#Research</span>
-                      <span class="story-tag">#Education</span>
-                      <span class="story-tag">#Growth</span>
-                  </div>
+      <p class="story-date story-date--carousel">Updated: June 2025</p>
+      <div class="story-carousel" data-story-carousel>
+          <button type="button" class="story-carousel__btn story-carousel__btn--prev" aria-label="Previous story">
+              <i class="fas fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="story-carousel__viewport">
+              <div class="story-carousel__track">
+                  <article class="story-slide" aria-hidden="false">
+                      <div class="story-slide__image">
+                          <img src="assets/textimage1.jpeg" alt="Olapeju at the start of her product design journey">
+                      </div>
+                      <div class="story-slide__card">
+                          <p class="story-slide__counter">1 of 3</p>
+                          <p class="story-paragraph">Though I&rsquo;d like to say my journey into product design began the first time I picked up a needle and thread to bring my fashion sketches to life, I didn&rsquo;t fully understand what that path could look like until much later. My journey truly began after first hearing about the field from a product designer at a conference. Curious, I started researching concepts and teaching myself how to use design software like Figma. I learned even more when I was accepted into IBM&rsquo;s Accelerate Design Program in the summer of 2023. I spent hours each day after returning from my internship working on case studies and strengthening both my skills and understanding and even began my first course offered by Google&rsquo;s UX Design Certificate Program.</p>
+                      </div>
+                  </article>
+                  <article class="story-slide" aria-hidden="true">
+                      <div class="story-slide__image">
+                          <img src="assets/textimage2.jpeg" alt="Olapeju researching in the Affective Computing Lab at UMBC">
+                      </div>
+                      <div class="story-slide__card">
+                          <p class="story-slide__counter">2 of 3</p>
+                          <p class="story-paragraph">My passion for product design deepened during my time as a student researcher in the Affective Computing Lab at UMBC, where I studied human behavior and interaction dynamics through detailed observational research. Guided by my research mentor, Dr. Andrea Kleinsmith, this experience inspired me to pursue an accelerated Master&rsquo;s in Human-Centered Computing alongside my undergraduate studies. I began to realize that my love for fashion design was rooted in a desire to connect with people and understand their needs. Meanwhile, my studies in Information Systems equipped me with the technical skills to translate those insights into functional, user-centered solutions.</p>
+                      </div>
+                  </article>
+                  <article class="story-slide" aria-hidden="true">
+                      <div class="story-slide__image">
+                          <img src="assets/textimage3.jpeg" alt="Olapeju at Carnegie Mellon University">
+                      </div>
+                      <div class="story-slide__card">
+                          <p class="story-slide__counter">3 of 3</p>
+                          <p class="story-paragraph">Motivated to turn this passion into a career, I completed my product design training through the Google UX Design Certificate program on Coursera. There, I honed skills in wireframing, prototyping, and user-centered design. Since then, I&rsquo;ve conducted user research, built case studies, and continuously refined my portfolio driven by a mindset of lifelong learning. I am currently pursuing my Master&rsquo;s in Human-Computer Interaction at Carnegie Mellon University. I&rsquo;m excited to continue growing as a designer and creating meaningful experiences that make a real difference in people&rsquo;s lives.</p>
+                      </div>
+                  </article>
               </div>
-              <p class="story-paragraph">Though I’d like to say my journey into product design began the first time I picked up a needle and thread to bring my fashion sketches to life, I didn’t fully understand what that path could look like until much later. My journey truly began after first hearing about the field from a product designer at a conference. Curious, I started researching concepts and teaching myself how to use design software like Figma. I learned even more when I was accepted into IBM's Accelerate Design Program in the summer of 2023. I spent hours each day after returning from my internship working on case studies and strengthening both my skills and understanding and even began my first course offered by Google's UX Design Certificate Program.</p>
-              <p class="story-paragraph"> My passion for product design deepened during my time as a student researcher in the Affective Computing Lab at UMBC, where I studied human behavior and interaction dynamics through detailed observational research. Guided by my research mentor, Dr. Andrea Kleinsmith, this experience inspired me to pursue an accelerated Master’s in Human-Centered Computing alongside my undergraduate studies. I began to realize that my love for fashion design was rooted in a desire to connect with people and understand their needs. Meanwhile, my studies in Information Systems equipped me with the technical skills to translate those insights into functional, user-centered solutions.</p>
-              <p class="story-paragraph">Motivated to turn this passion into a career, I completed my product design training through the Google UX Design Certificate program on Coursera. There, I honed skills in wireframing, prototyping, and user-centered design. Since then, I’ve conducted user research, built case studies, and continuously refined my portfolio driven by a mindset of lifelong learning. I am currently pursuing my Master’s in Human-Computer Interaction at Carnegie Mellon University. I'm excited to continue growing as a designer and creating meaningful experiences that make a real difference in people’s lives.</p>
-              </div>
+          </div>
+          <button type="button" class="story-carousel__btn story-carousel__btn--next" aria-label="Next story">
+              <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
       </div>
   </section>
 
@@ -252,5 +276,64 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    (function () {
+        var carousel = document.querySelector('[data-story-carousel]');
+        if (!carousel) return;
+
+        var track = carousel.querySelector('.story-carousel__track');
+        var slides = carousel.querySelectorAll('.story-slide');
+        var prevBtn = carousel.querySelector('.story-carousel__btn--prev');
+        var nextBtn = carousel.querySelector('.story-carousel__btn--next');
+        if (!track || !slides.length || !prevBtn || !nextBtn) return;
+        var index = 0;
+
+        function goTo(nextIndex) {
+            index = ((nextIndex % slides.length) + slides.length) % slides.length;
+            track.style.transform = 'translateX(-' + (index * 100) + '%)';
+
+            slides.forEach(function (slide, i) {
+                var isActive = i === index;
+                slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+            });
+        }
+
+        prevBtn.addEventListener('click', function () {
+            goTo(index - 1);
+        });
+
+        nextBtn.addEventListener('click', function () {
+            goTo(index + 1);
+        });
+    })();
+    </script>
+    <script>
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('from') !== 'fashion') return;
+
+        var card = document.getElementById('fashion-design');
+        if (!card) return;
+
+        function applyHighlight() {
+            card.classList.add('fun-fact-card--landing-highlight');
+            card.addEventListener('animationend', function () {
+                card.classList.remove('fun-fact-card--landing-highlight');
+            }, { once: true });
+
+            if (window.history.replaceState) {
+                window.history.replaceState(null, '', window.location.pathname + window.location.hash);
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function () {
+                requestAnimationFrame(applyHighlight);
+            });
+        } else {
+            requestAnimationFrame(applyHighlight);
+        }
+    })();
+    </script>
 </body>
 </html>
